@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+	<title>Slot Machine</title>
+	<link rel="stylesheet" href="./res/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="./res/css/styletable.css" type="text/css" media="screen" />
+	
+</head>
+<html>
+<body onload="toggleAudio()">
+	<div class="row">
+		<div class="column">
+			<main>
+				<section id="status">WELCOME Derivco Slot! Random mode</section>
+				<section id="Slots">
+					<div id="slotT1"  class="a1"></div>
+					<div id="slotT2"  class="a1"></div>
+					<div id="slotT3"  class="a1"></div>
+					<div id="slot1"   class="a2"></div>
+					<div id="slot2"   class="a2"></div>
+					<div id="slot3"   class="a2"></div>
+					<div id="slotB1"  class="a3"></div>
+					<div id="slotB2"  class="a3"></div>
+					<div id="slotB3"  class="a3"></div>
+				</section>
+				<div id="TopSlot" class="top-left" style="visibility: hidden;"><h1>&#10004;</h1></div>
+				<div id="CenterSlot" class="center-left" style="visibility: hidden;"><h1>&#10004;</h1></div>
+				<div id="BottomSlot" class="bottom-left" style="visibility: hidden;"><h1>&#10004;</h1></div>
+				<section onclick="doSlot()" id="Gira">SPIN!</section>
+				<section id="options">
+					<img src="res/icons/audioOn.png" id="audio" class="option" onclick="toggleAudio()" />
+						
+					<!-- Rounded switch -->
+					<label class="switch"><input type="checkbox" id="togBtn" onclick="toggleMode()">
+						<div class="slider round">
+							<!--ADDED HTML -->
+							<span class="on">Fixed</span>
+							<span class="off">Random</span>
+							<!--END-->
+						</div>
+					</label>
+					<input type="number" class="ex1" name="balance" min="1" max="5000" placeholder="Balance">
+					<select multiple="multiple" id="contentlist" class="custom-select">
+						<option value="a2">BAR</option>
+						<option value="a3">2xBAR</option>
+						<option value="a1">3xBAR</option>
+						<option value="a4">7</option>
+						<option value="a5">CHERRY</option>
+					</select>
+					<button id="Up" onclick="moveUp(); return false;">Up</button>
+					<button id="Down" onclick="moveDown(); return false;">Down</button>
+					
+						<select id="landingposition">
+							<option value="1">Top,Center,Bottom</option>
+							<option value="2">Bottom,Center,Top</option>
+						</select>
+					
+				</section>
+			</main>
+		</div>
+		<div class="column">
+			<div class="table">
+				<div class="table-cell"></div>
+				<div class="table-cell plattform">
+					<h3>Pay Table</h3>
+					<a href="" class="btn">Try again now</a>
+				</div>
+				<div class="table-cell enterprise">
+					<h3>Slots</h3>
+					<a href="" class="btn">Send us a Email</a>
+				</div>
+				<div class="table-cell cell-feature slot">Top Reels</div>
+				<div class="table-cell" id="Topinfo">
+					
+				</div>
+				<div class="table-cell" id="Topnumber">
+					
+				</div>
+				<div class="table-cell cell-feature slot">Center Reels</div>
+				<div class="table-cell" id="Centerinfo">
+					
+				</div>
+				<div class="table-cell" id="Centernumber">
+					
+				</div>
+				<div class="table-cell cell-feature slot">Bottom Reels</div>
+				<div class="table-cell" id="Bottominfo">
+					
+				</div>
+				<div class="table-cell" id="Bottomnumber">
+					
+				</div>
+				<div class="table-cell cell-feature sum">Sum</div>
+				<div class="table-cell sum">-</div>
+				<div class="table-cell sum" >
+					<h4 id="Sumnumber"></h4>
+					<div class="alarmText" id="alarmText" style="visibility: hidden;">
+						<h5 id="winningtext">Winning sum  </h5>
+				 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="./res/js/slot.js"></script>
+<script>
+
+</script>
+</body>
+</html>
